@@ -773,7 +773,10 @@
         <div class="slide slide-light slide-centered" id="slide7" style="padding: 60px;">
             <span class="section-tag">Motor 1: Revenue</span>
             <h2>Truco <span class="highlight">TikTok</span></h2>
-            <video id="videoTruco" src="truco-tiktok.mp4" muted loop playsinline style="max-height: calc(100vh - 220px); max-width: 350px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); margin-top: 20px;"></video>
+            <div style="display: flex; gap: 24px; margin-top: 20px; justify-content: center; align-items: center;">
+                <video id="videoTruco" src="truco-tiktok.mp4" muted loop playsinline style="max-height: calc(100vh - 220px); max-width: 280px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.15);"></video>
+                <video id="videoTruco2" src="truco-tiktok-2.mp4" muted loop playsinline style="max-height: calc(100vh - 220px); max-width: 280px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.15);"></video>
+            </div>
         </div>
 
         <!-- ===================== SLIDE 8: SEPARADOR MOTOR 2 (DARK) ===================== -->
@@ -1070,11 +1073,15 @@
 
             // Video autoplay/pause
             const video = document.getElementById('videoTruco');
+            const video2 = document.getElementById('videoTruco2');
             if (n === 7) {
                 video.currentTime = 0;
+                video2.currentTime = 0;
                 video.play();
+                video2.play();
             } else {
                 video.pause();
+                video2.pause();
             }
         }
 
